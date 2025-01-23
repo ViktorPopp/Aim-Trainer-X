@@ -266,8 +266,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPrefab: {fileID: 564964649823106289, guid: b7abf676c70496d42a326e858b68d4b4, type: 3}
-  spawnInterval: 2
-  spawnRadius: 5
+  spawnInterval: 0.8
+  minSpawnDistance: 6
+  maxSpawnDistance: 9
+  minSpawnHeight: 0.6
+  maxSpawnHeight: 2.6
 --- !u!1 &337441330
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +671,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootRange: 100
-  crosshair: {fileID: 0}
 --- !u!1 &1954977095
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +729,6 @@ GameObject:
   - component: {fileID: 2134049792}
   - component: {fileID: 2134049794}
   - component: {fileID: 2134049793}
-  - component: {fileID: 2134049795}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -792,22 +793,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134049791}
   m_CullTransparentMesh: 1
---- !u!114 &2134049795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134049791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d05f15dc230454e8bc3a86b1555e9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshairImage: {fileID: 2134049793}
-  normalSize: 20
-  expandedSize: 30
-  expandSpeed: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

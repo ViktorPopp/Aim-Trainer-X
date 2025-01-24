@@ -21,6 +21,7 @@ public class PlayerShoot : MonoBehaviour
             if (hit.collider.CompareTag("Target"))
             {
                 DataManager.hits++;
+                FindFirstObjectByType<AudioManager>().PlaySound("TargetHit");
                 Destroy(hit.collider.gameObject);
             }
         }

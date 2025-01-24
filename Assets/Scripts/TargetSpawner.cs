@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class TargetSpawner : MonoBehaviour
 {
-    public GameObject targetPrefab; 
-    public float gridSize = 5f; 
+    public GameObject targetPrefab;
+    public float gridSize = 5f;
     public float spawnDepth = 2f; // Depth from spawner (for visibility from the side)
-    public float respawnDelay = 1f; 
+    public float respawnDelay = 1f;
 
-    private bool[,] gridOccupied = new bool[5, 5]; 
-    private int targetCount = 0; 
-    private const int maxTargets = 3; 
-    private bool isRespawning = false; 
+    private bool[,] gridOccupied = new bool[5, 5];
+    private int targetCount = 0;
+    private const int maxTargets = 3;
+    private bool isRespawning = false;
 
     void Start()
     {
@@ -53,15 +53,15 @@ public class TargetSpawner : MonoBehaviour
 
         float gridSpacing = gridSize / 5f;
         // Vertical grid layout (X for horizontal, Y for vertical)
-        float offsetX = (gridX - 2) * gridSpacing; 
-        float offsetY = (gridY - 2) * gridSpacing; 
+        float offsetX = (gridX - 2) * gridSpacing;
+        float offsetY = (gridY - 2) * gridSpacing;
 
         // Position: X (horizontal), Y (vertical), Z (depth for side visibility)
-        Vector3 spawnPosition = transform.position + 
+        Vector3 spawnPosition = transform.position +
             new Vector3(offsetX, offsetY, spawnDepth);
 
         // Rotate target 90° around X-axis to make it upright
-        Quaternion spawnRotation = Quaternion.Euler(90f, 0f, 0f); 
+        Quaternion spawnRotation = Quaternion.Euler(90f, 0f, 0f);
         GameObject target = Instantiate(targetPrefab, spawnPosition, spawnRotation);
 
         TargetController targetController = target.AddComponent<TargetController>();

@@ -54,7 +54,7 @@ For support, please use the following resources:
 
 ## License :page_facing_up:
 
-Aim Trainer X is licensed under the MIT License. See the [LICENSE](https://github.com/viktorpopp/Aim-Trainer-X/blob/main/LICENSE.txt) file for more details.
+Aim Trainer X is licensed under the Apache 2.0 License. See the [LICENSE.txt](https://github.com/viktorpopp/Aim-Trainer-X/blob/main/LICENSE.txt) file for more details.
 
 ---
 

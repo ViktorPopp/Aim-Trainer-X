@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPrefab: {fileID: 564964649823106289, guid: b7abf676c70496d42a326e858b68d4b4, type: 3}
-  spawnInterval: 0.01
+  spawnInterval: 0.6
   minSpawnDistance: 6
   maxSpawnDistance: 9
   minSpawnHeight: 0.6

@@ -4,7 +4,7 @@ public class TargetSpawner : MonoBehaviour
 {
     public GameObject targetPrefab;
     public float gridSize = 5f;
-    public float spawnDepth = 2f; // Depth from spawner (for visibility from the side)
+    public float spawnDepth = 2f;
     public float respawnDelay = 1f;
 
     private bool[,] gridOccupied = new bool[5, 5];
@@ -52,11 +52,9 @@ public class TargetSpawner : MonoBehaviour
         gridOccupied[gridX, gridY] = true;
 
         float gridSpacing = gridSize / 5f;
-        // Vertical grid layout (X for horizontal, Y for vertical)
         float offsetX = (gridX - 2) * gridSpacing;
         float offsetY = (gridY - 2) * gridSpacing;
 
-        // Position: X (horizontal), Y (vertical), Z (depth for side visibility)
         Vector3 spawnPosition = transform.position +
             new Vector3(offsetX, offsetY, spawnDepth);
 

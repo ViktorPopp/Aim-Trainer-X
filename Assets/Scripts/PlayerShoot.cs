@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public float shootRange = 100f;     // Range of the shot
+    public float shootRange = 100f;
 
     void Update()
     {
@@ -14,14 +14,15 @@ public class PlayerShoot : MonoBehaviour
 
     void Shoot()
     {
+        DataManager.shots++;
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, shootRange))
         {
             if (hit.collider.CompareTag("Target"))
             {
+                DataManager.hits++;
                 Destroy(hit.collider.gameObject);
             }
         }
-
     }
 }

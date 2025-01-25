@@ -56,5 +56,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Aim Trainer X.sln"
+    "dotnet.defaultSolution": "Aim Trainer X.sln",
+    "material-icon-theme.folders.associations": {
+        "Player": "admin",
+    },
 }

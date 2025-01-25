@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GridGameManager : MonoBehaviour
+public class ShootingGameManager : MonoBehaviour
 {
     public TMPro.TMP_Text accuracyText;
 
